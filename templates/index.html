@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Olaoluwasubomi Jet Tracker</title>
+</head>
+<body>
+    <h1> Olaoluwasubomi Jet Tracker</h1>
+    <form method="post" action="{{ url_for('scrape') }}">
+        <select name="options">
+            {% for option in options %}
+            <option value="{{ option.value }}">{{ option.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Check">
+    </form>
+</body>
+</html>
